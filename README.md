@@ -21,6 +21,12 @@ A simulated banking application built with Python, Streamlit, SQLite, and Google
 - **LLM Service (`services/llm_service.py`):** Classifies natural-language requests using rules and Gemini.
 - **SQLite (`database/`):** Stores simulated customer, account, transaction, and loan data.
 
+## Architecture Diagram
+
+![Multi-Agent Banking Simulation Architecture](docs/architecture.png)
+
+The Supervisor coordinates incoming requests and routes them to the Banking, Risk, or Credit Agent. These agents process simulated banking data stored in SQLite. Gemini provides fallback classification for requests that local rules do not recognize.
+
 ## Requirements
 
 - Python 3.10 or later
